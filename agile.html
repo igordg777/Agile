@@ -34,7 +34,7 @@
     </div>
 
     <div style="text-align: center; width: 80%; border-color: black; margin: 0 auto 0;">
-        <h1 class="animate__animated animate__pulse ">Подумайте на правильным вариантом согласно манифеста <br> и
+        <h1 class="animate__animated animate__pulse ">Подумайте над правильным вариантом согласно манифеста <br> и
             выберите из
             списка</h1>
     </div>
@@ -120,10 +120,13 @@
 
         </tr>
     </table>
+    <div>
+        <div id="mainPage" style="text-align: center; margin: 0 auto 0;; margin-top: 51px; display: none;">
 
-    <div id="mainPage" style="width: 90%; margin: 0 auto; margin-top: 51px; display: none;">
-        <img src="./images/main.jpeg" alt="Agile - это манифест">
+            <img src="./images/main.jpeg" width='90%' alt="Agile - это манифест">
+        </div>
     </div>
+
 
     <div class="two" style="width: 65%; margin: 0 auto; margin-top: 51px;">
         <h1>
@@ -376,7 +379,7 @@
             let correct3 = document.getElementById('correct3');
             let correct4 = document.getElementById('correct4');
             if (correct1.style.background === 'lightgreen' && correct2.style.background === 'lightgreen' && correct3.style.background === 'lightgreen' && correct4.style.background === 'lightgreen') {
-                document.getElementById('mainPage').setAttribute('style', 'width: 90%; margin: 0 auto; margin-top: 51px; display: view;')
+                document.getElementById('mainPage').setAttribute('style', 'text-align: center; margin: 0 auto 0; margin-top: 51px; display: view;')
             }
 
         })
