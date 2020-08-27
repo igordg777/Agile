@@ -15,7 +15,8 @@
         <h1>
             Agile-манифест разработки программного обеспечения</h1>
     </div>
-    <div style="text-align: center; width: 80%; border-color: black; margin: 0 auto 0;">
+    <div
+        style="text-align: center; width: 80%; border-color: black; margin: 0 auto 0; margin-top: 50px; margin-bottom: 50px;">
         <h1 class="animate__animated animate__pulse ">Манифест гибкой разработки
             программного
             обеспечения — основной
@@ -33,12 +34,15 @@
         </div>
     </div>
 
-    <div style="text-align: center; width: 80%; border-color: black; margin: 0 auto 0;">
-        <h1 class="animate__animated animate__pulse ">Подумайте над правильным вариантом согласно манифеста <br> и
+    <div style="text-align: center; width: 80%; border-color: black; margin: 0 auto 0; margin-top: 50px;">
+        <h1 class="animate__animated animate__shakeY animate__delay-3s animate__repeat-1">Подумайте над
+            правильным вариантом
+            согласно
+            манифеста <br> и
             выберите из
             списка</h1>
     </div>
-    <table align="center" border="solid pixel 2">
+    <table align="center" border="solid pixel 2" class="mainTable">
         <tr>
             <td style="color:crimson; font-size: 21px; padding: 5px">Люди и взаимодействие</td>
             <td style="color:blue; font-size: 21px; padding: 5px">важнее</td>
@@ -120,6 +124,91 @@
 
         </tr>
     </table>
+
+    <table align="center" border="solid pixel 2" class="miniTable">
+        <tr>
+            <td style="color:crimson; font-size: 21px; padding: 5px">Люди и взаимодействие</td>
+            <td style="color:blue; font-size: 21px; padding: 5px">важнее</td>
+            <td>
+                <div class="choose " data-correct="incorrect1m">выполнения
+                    плана</div>
+                <div class="choose " data-correct="incorrect1m">официальных
+                    отношений в команде
+                </div>
+                </div>
+                <div class="choose " id="correct1m" data-correct="correct1m">
+                    процессов и
+                    инструментов</div>
+                <div class="choose " data-correct="incorrect1m">индивидуальной
+                    работы на фрилансе
+                </div>
+            </td>
+
+        </tr>
+        <tr>
+            <td style="color:crimson; font-size: 21px; padding: 5px">Работающий продукт </td>
+            <td style="color:blue; font-size: 21px; padding: 5px">важнее</td>
+            <td>
+                <div class="choose " data-correct="incorrect2m">некачественной
+                    разработки для
+                    быстрого заработка</div>
+                <div class="choose " id="correct2m" data-correct="correct2m">
+                    исчерпывающей
+                    документации</div>
+                <div class="choose " data-correct="incorrect2m">скорости его
+                    разработки</div>
+                <div class="choose " data-correct="incorrect2m">красивого
+                    дизайна</div>
+
+            </td>
+
+        </tr>
+        <tr>
+            <td style="color:crimson; font-size: 21px; padding: 5px">Сотрудничество с заказчиком</td>
+            <td style="color:blue; font-size: 21px; padding: 5px">важнее</td>
+            <td>
+                <div class="choose " data-correct="incorrect3m">сотрудничества
+                    с целевой
+                    аудиторией</div>
+                <div class="choose " data-correct="incorrect3m">простого
+                    выполнения технического
+                    задания</div>
+                <div class="choose " data-correct="incorrect3m">продажи
+                    продукта по высокой цене
+                </div>
+                <div class="choose " id="correct3m" data-correct="correct3m">
+                    согласования
+                    условий контракта
+                </div>
+            </td>
+
+        </tr>
+        <tr>
+            <td style="color:crimson; font-size: 21px; padding: 5px">Готовность к изменениям</td>
+            <td style="color:blue; font-size: 21px; padding: 5px">важнее</td>
+            <td>
+                <div class="choose " data-correct="incorrect4m">на
+                    заключительном этапе
+                    разработки продукта</div>
+                <div class="choose " id="correct4m" data-correct="correct4m">
+                    следования
+                    первоначальному плану
+                </div>
+                <div class="choose " data-correct="incorrect4m">даже в случаях
+                    увеличения времени
+                    на разработку
+                    продукта</div>
+                <div class="choose " data-correct="incorrect4m">несмотря на то
+                    что
+                    придется
+                    разрабатывать
+                    продукт заново</div>
+            </td>
+
+        </tr>
+    </table>
+
+
     <div>
         <div id="mainPage" style="text-align: center; margin: 0 auto 0;; margin-top: 51px; display: none;">
 
@@ -128,7 +217,7 @@
     </div>
 
 
-    <div class="two" style="width: 65%; margin: 0 auto; margin-top: 51px;">
+    <div class="two" style="width: 100%; margin: 0 auto; margin-top: 51px;">
         <h1>
             Основополагающие принципы Agile-манифеста</h1>
     </div>
@@ -356,7 +445,7 @@
 
         document.addEventListener('click', function (e) {
 
-            if (e.target.dataset.correct === 'correct1' || e.target.dataset.correct === 'correct2' || e.target.dataset.correct === 'correct3' || e.target.dataset.correct === 'correct4') {
+            if (e.target.dataset.correct === 'correct1' || e.target.dataset.correct === 'correct2' || e.target.dataset.correct === 'correct3' || e.target.dataset.correct === 'correct4' || e.target.dataset.correct === 'correct1m' || e.target.dataset.correct === 'correct2m' || e.target.dataset.correct === 'correct3m' || e.target.dataset.correct === 'correct4m') {
                 e.target.style = "background: lightgreen"
                 let otherInCase = 'in' + e.target.dataset.correct
                 let arrOtherInCase = document.getElementsByClassName('choose')
@@ -369,8 +458,7 @@
 
                 }
 
-
-            } else if (e.target.dataset.correct === 'incorrect1' || e.target.dataset.correct === 'incorrect2' || e.target.dataset.correct === 'incorrect3' || e.target.dataset.correct === 'incorrect4') {
+            } else if (e.target.dataset.correct === 'incorrect1' || e.target.dataset.correct === 'incorrect2' || e.target.dataset.correct === 'incorrect3' || e.target.dataset.correct === 'incorrect4' || e.target.dataset.correct === 'incorrect1m' || e.target.dataset.correct === 'incorrect2m' || e.target.dataset.correct === 'incorrect3m' || e.target.dataset.correct === 'incorrect4m') {
                 e.target.style = "background: red"
             }
 
@@ -379,6 +467,14 @@
             let correct3 = document.getElementById('correct3');
             let correct4 = document.getElementById('correct4');
             if (correct1.style.background === 'lightgreen' && correct2.style.background === 'lightgreen' && correct3.style.background === 'lightgreen' && correct4.style.background === 'lightgreen') {
+                document.getElementById('mainPage').setAttribute('style', 'text-align: center; margin: 0 auto 0; margin-top: 51px; display: view;')
+            }
+
+            let correct1m = document.getElementById('correct1m');
+            let correct2m = document.getElementById('correct2m');
+            let correct3m = document.getElementById('correct3m');
+            let correct4m = document.getElementById('correct4m');
+            if (correct1m.style.background === 'lightgreen' && correct2m.style.background === 'lightgreen' && correct3m.style.background === 'lightgreen' && correct4m.style.background === 'lightgreen') {
                 document.getElementById('mainPage').setAttribute('style', 'text-align: center; margin: 0 auto 0; margin-top: 51px; display: view;')
             }
 
@@ -532,6 +628,28 @@
         .icons:hover {
             box-shadow: 0 0 10px 0 blue inset, 0 0 10px 4px blue;
             color: red;
+        }
+
+
+        @media (max-width: 700px) and (min-width: 0px) {
+            .mainTable {
+                display: none;
+            }
+
+            .miniTable {
+                display: view;
+            }
+        }
+
+        @media (max-width: 4000px) and (min-width: 701px) {
+            .mainTable {
+                display: view;
+            }
+
+            .miniTable {
+                display: none;
+            }
+
         }
     </style>
 
